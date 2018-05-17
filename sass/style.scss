@@ -1,0 +1,137 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0 auto;
+}
+$white: #fff;
+$graybackground: #f5f6f7;
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+}
+.wrap {
+	flex-wrap: wrap;
+}
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+h2 {
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.btn {
+	background-color: #16a085;
+	text-transform: uppercase;
+	border: none;
+	color: $white;
+	border-radius: 10px;
+}
+#home {
+	background-image: url('../images/background.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	height: 600px;
+	.container {
+		nav {
+			ul {
+				padding-top: 30px;
+				padding-left: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 auto;
+					li {
+						list-style-type: none;
+						text-transform: uppercase;
+						padding: 10px 50px;
+						
+						a {
+							
+							text-decoration: none;
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+		.header-content {
+			height: 400px;
+			color: $white;
+			h1 {
+				font-size: 36px;
+				text-transform: uppercase;
+				margin: 0;
+			}
+			p {
+				font-size: 16px;
+			}
+		}
+		.social{
+			margin: 0 auto;
+			text-align: center;
+			button {
+				border-radius: 50%;
+				background-color: rgba(0,0,0,0);
+				color: $white;
+				border: none;
+				font-size: 30px;
+				padding: 20px;
+				cursor: pointer;
+			}
+		}
+	}
+
+#subscription {
+	background-image: url('../images/background2.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	height: 700px;
+	.center {
+		height: 700px;
+	}
+}
+
+#download {
+	background-color: $graybackground;
+	text-align: center;
+	.row {
+
+	}
+}
+
+footer {
+	padding: 20px 0 20px 0;
+	.container {
+
+		.row {
+			justify-content: space-between;
+			align-items: center;
+			.info {
+				ul {
+					padding: 0;
+					li {
+						list-stye-type: none;
+						display: inline-block;
+						text-transform: uppercase;
+					}
+				}
+			}
+			.logoFooter {
+				padding-right: 100px;
+			}
+		}
+	}
+}

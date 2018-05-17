@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.center {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.btn {
+  background-color: #16a085;
+  text-transform: uppercase;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+}
+
+#home {
+  background-image: url("../images/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 600px;
+}
+
+#home .container nav ul {
+  padding-top: 30px;
+  padding-left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: 0 auto;
+}
+
+#home .container nav ul li {
+  list-style-type: none;
+  text-transform: uppercase;
+  padding: 10px 50px;
+}
+
+#home .container nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#home .header-content {
+  height: 400px;
+  color: #fff;
+}
+
+#home .header-content h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#home .header-content p {
+  font-size: 16px;
+}
+
+#home .social {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#home .social button {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+#subscription {
+  background-image: url("../images/background2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 700px;
+}
+
+#subscription .center {
+  height: 700px;
+}
+
+#download {
+  background-color: #f5f6f7;
+  text-align: center;
+}
+
+footer {
+  padding: 20px 0 20px 0;
+}
+
+footer .container .row {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+footer .container .row .info ul {
+  padding: 0;
+}
+
+footer .container .row .info ul li {
+  list-stye-type: none;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+footer .container .row .logoFooter {
+  padding-right: 100px;
+}
+/*# sourceMappingURL=style.prefixed.css.map */
