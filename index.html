@@ -37,7 +37,7 @@
 	<section id="photoapp">
 		<div class="container row">
 			<div class="left">
-				<h2>Rappresent your life with a<br>simple photo</h2>
+				<h2 class="maincolor">Rappresent your life with a<br>simple photo</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 				sed do eiusmod tempor incididunt ut labore et dolore 
 				magna aliqua. <span>Ut enim ad minim</span> veniam, quis 
@@ -52,7 +52,7 @@
 	</section>
 	<section id="design">
 		<div class="container">
-			<div class="row">
+			<div class="row wrap">
 				<div class="phonepic">
 					<img src="images/phone2.png" alt="">
 				</div>
@@ -63,20 +63,31 @@
 				    <!-- Additional required wrapper -->
 				    <div class="swiper-wrapper">
 				        <!-- Slides -->
-				        <div class="swiper-slide">Slide 1</div>
-				        <div class="swiper-slide">Slide 2</div>
-				        <div class="swiper-slide">Slide 3</div>
-				        ...
+				        <div class="swiper-slide">
+				        	<h3 class="maincolor">design</h3>
+				        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore 
+							magna aliqua. Ut enim ad minim veniam, quis 
+							nostrud exercitation ullamco laboris nisi 
+							ut aliquip ex ea commodo consequat.</p>
+							<button class="btn">learn more</button>
+				        </div>
+				        <div class="swiper-slide">
+				        	<h3 class="maincolor">design</h3>
+				        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore 
+							magna aliqua. Ut enim ad minim veniam, quis 
+							nostrud exercitation ullamco laboris nisi 
+							ut aliquip ex ea commodo consequat.</p>
+							<button class="btn">learn more</button>
+				        </div>
 				    </div>
-				    <!-- If we need pagination -->
-				    <div class="swiper-pagination"></div>
 
 				    <!-- If we need navigation buttons -->
 				    <div class="swiper-button-prev"></div>
 				    <div class="swiper-button-next"></div>
 
 				    <!-- If we need scrollbar -->
-				    <div class="swiper-scrollbar"></div>
 				</div>
 
 
@@ -88,12 +99,23 @@
 	<section id="community">
 		<div class="container">
 			<div class="row">
-				<div class="about">
+				<div class="about center">
+					<img src="images/greenLogo.png" alt="">
 					<h3>our community</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+					<p>Lorem ipsum dolor sit<br/> amet, consectetur <br/>adipiscing elit</p>
 				</div>
-				<div id="carousel2">
-
+				<div class="swiper-container swip">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide"><img src="images/bus.jpg" alt=""></div>
+				      <div class="swiper-slide"><img src="images/tree.jpg" alt=""></div>
+				      <div class="swiper-slide"><img src="images/bus.jpg" alt=""></div>
+				      <div class="swiper-slide"><img src="images/tree.jpg" alt=""></div>
+				    </div>
+				    <!-- Add Pagination -->
+				    <div class="swiper-pagination pag"></div>
+				    <!-- Add Arrows -->
+				    <div class="swiper-button-next butnext"></div>
+				    <div class="swiper-button-prev butprev"></div>
 				</div>
 			</div>
 		</div>
@@ -101,9 +123,11 @@
 
 	<section id="subscription">
 		<div class="center">
-		<h2>subscribe to us community</h2>
-			<input type="email" placeholder="your email">
-			<input type="submit">
+			<h2>subscribe to us community</h2>
+			<div class="inputs">
+				<input type="email" placeholder="your email" class="email">
+				<button type="submit" class="submit"><i class="fas fa-check"></i></button>
+			</div>
 		</div>
 	</section>
 	<section id="download">
@@ -137,6 +161,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
 		<script type="text/javascript" src="swiper.js"></script>
 	</footer>
+
+	<!--SWIPER-->
 	 <script>
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
@@ -159,6 +185,24 @@
       el: '.swiper-scrollbar',
     },
   })
+  </script>
+
+  <script>
+    var swiper2 = new Swiper('.swip'{
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.pag',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.butnext',
+        prevEl: '.butprev',
+      },
+    });
   </script>
 </body>
 </html>
