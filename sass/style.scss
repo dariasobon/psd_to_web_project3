@@ -8,6 +8,7 @@ body {
 }
 $white: #fff;
 $graybackground: #f5f6f7;
+$maincolor: #16a085;
 
 .container {
 	width: 1200px;
@@ -33,11 +34,13 @@ h2 {
 }
 
 .btn {
-	background-color: #16a085;
+	background-color: $maincolor;
 	text-transform: uppercase;
 	border: none;
 	color: $white;
 	border-radius: 10px;
+	width: 150px;
+	height: 50px;
 }
 #home {
 	background-image: url('../images/background.jpg');
@@ -93,6 +96,50 @@ h2 {
 			}
 		}
 	}
+
+#photoapp {
+	height: 500px;
+	background-color: $graybackground;
+	overflow: hidden;
+	position: relative;
+	.left {
+		display: flex;
+		flex-direction: column;
+		padding: 100px 0 100px 0;
+		width: 40%;
+		h2 {
+			color: $maincolor;
+		}
+		p {
+			padding: 50px 0 50px;
+			line-height: 1.7;
+		}
+		button {
+		}
+	}
+	.right {
+		position: absolute;
+		right: 150px;
+		top: 100px;
+		overflow: hidden;
+		img {
+		}
+	}
+}
+
+#design {
+	.container {
+		.row {
+			.phonepic{
+
+			}
+			.swiper-container{
+			    width: 600px;
+			    height: 300px;
+			}
+		}
+	}
+}
 
 #subscription {
 	background-image: url('../images/background2.jpg');
