@@ -101,28 +101,31 @@ h2 {
 	height: 500px;
 	background-color: $graybackground;
 	overflow: hidden;
-	position: relative;
-	.left {
-		display: flex;
-		flex-direction: column;
-		padding: 100px 0 100px 0;
-		width: 40%;
-		h2 {
-			color: $maincolor;
+	
+	.container {
+		position: relative;
+		.left {
+			display: flex;
+			flex-direction: column;
+			padding: 100px 0 100px 0;
+			width: 40%;
+			h2 {
+				color: $maincolor;
+			}
+			p {
+				padding: 50px 0 50px;
+				line-height: 1.7;
+			}
+			button {
+			}
 		}
-		p {
-			padding: 50px 0 50px;
-			line-height: 1.7;
-		}
-		button {
-		}
-	}
-	.right {
-		position: absolute;
-		right: 150px;
-		top: 100px;
-		overflow: hidden;
-		img {
+		.right {
+			position: absolute;
+			right: 150px;
+			top: 100px;
+			overflow: hidden;
+			img {
+			}
 		}
 	}
 }
