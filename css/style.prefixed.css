@@ -111,10 +111,13 @@ h2 {
   height: 500px;
   background-color: #f5f6f7;
   overflow: hidden;
+}
+
+#photoapp .container {
   position: relative;
 }
 
-#photoapp .left {
+#photoapp .container .left {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -123,16 +126,16 @@ h2 {
   width: 40%;
 }
 
-#photoapp .left h2 {
+#photoapp .container .left h2 {
   color: #16a085;
 }
 
-#photoapp .left p {
+#photoapp .container .left p {
   padding: 50px 0 50px;
   line-height: 1.7;
 }
 
-#photoapp .right {
+#photoapp .container .right {
   position: absolute;
   right: 150px;
   top: 100px;
