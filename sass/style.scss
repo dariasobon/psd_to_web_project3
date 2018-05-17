@@ -9,6 +9,7 @@ body {
 $white: #fff;
 $graybackground: #f5f6f7;
 $maincolor: #16a085;
+$graycolor: #373737;
 
 .container {
 	width: 1200px;
@@ -31,6 +32,14 @@ $maincolor: #16a085;
 h2 {
 	text-transform: uppercase;
 	margin: 0;
+}
+
+h3 {
+	text-transform: uppercase;
+}
+
+.maincolor {
+	color: $maincolor;
 }
 
 .btn {
@@ -109,9 +118,6 @@ h2 {
 			flex-direction: column;
 			padding: 100px 0 100px 0;
 			width: 40%;
-			h2 {
-				color: $maincolor;
-			}
 			p {
 				padding: 50px 0 50px;
 				line-height: 1.7;
@@ -131,14 +137,49 @@ h2 {
 }
 
 #design {
+	height: 500px;
+	overflow: hidden;
 	.container {
+		padding: 20px;
 		.row {
 			.phonepic{
-
+				padding-top: 70px;
 			}
 			.swiper-container{
-			    width: 600px;
+				margin-top: 50px;
+			    width: 400px;
 			    height: 300px;
+			    .swiper-wrapper {
+			    	padding: 50px;
+			    	.swiper-slide {
+						
+			    		p {
+			    			padding-right: 100px;
+			    			line-height: 1.2;
+			    		}
+			    	}
+			    }
+			}
+		}
+	}
+}
+
+#community {
+	.container {
+		.about {
+			margin: 0 100px;
+			p {
+				text-align: center;
+			}
+		}
+		.swiper-container {
+			width: 500px;
+			height: 250px;
+			.swiper-slide {
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 		}
 	}
@@ -151,6 +192,33 @@ h2 {
 	height: 700px;
 	.center {
 		height: 700px;
+		h2 {
+			font-size: 36px;
+			color: $white;
+			margin-bottom: 30px;
+		}
+		.inputs {
+			display: flex;
+			border-radius: 5px;
+			overflow: hidden;
+			.email {
+				height: 45px;
+				line-height:1;
+				border: none;
+				font-size: 16px;
+				color: $graycolor;
+				outline: none;
+				padding: 10px;
+			}
+			.submit {
+				background-color: $maincolor;
+				color: $white;
+				margin: 0;
+				padding: 0 15px;
+				border: none;
+				font-size: 20px;
+			}
+		}
 	}
 }
 
