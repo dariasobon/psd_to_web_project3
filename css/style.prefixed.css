@@ -37,6 +37,14 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  text-transform: uppercase;
+}
+
+.maincolor {
+  color: #16a085;
+}
+
 .btn {
   background-color: #16a085;
   text-transform: uppercase;
@@ -126,10 +134,6 @@ h2 {
   width: 40%;
 }
 
-#photoapp .container .left h2 {
-  color: #16a085;
-}
-
 #photoapp .container .left p {
   padding: 50px 0 50px;
   line-height: 1.7;
@@ -142,9 +146,55 @@ h2 {
   overflow: hidden;
 }
 
+#design {
+  height: 500px;
+  overflow: hidden;
+}
+
+#design .container {
+  padding: 20px;
+}
+
+#design .container .row .phonepic {
+  padding-top: 70px;
+}
+
 #design .container .row .swiper-container {
-  width: 600px;
+  margin-top: 50px;
+  width: 400px;
   height: 300px;
+}
+
+#design .container .row .swiper-container .swiper-wrapper {
+  padding: 50px;
+}
+
+#design .container .row .swiper-container .swiper-wrapper .swiper-slide p {
+  padding-right: 100px;
+  line-height: 1.2;
+}
+
+#community .container .about {
+  margin: 0 100px;
+}
+
+#community .container .about p {
+  text-align: center;
+}
+
+#community .container .swiper-container {
+  width: 500px;
+  height: 250px;
+}
+
+#community .container .swiper-container .swiper-slide {
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 #subscription {
@@ -156,6 +206,38 @@ h2 {
 
 #subscription .center {
   height: 700px;
+}
+
+#subscription .center h2 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+#subscription .center .inputs {
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#subscription .center .inputs .email {
+  height: 45px;
+  line-height: 1;
+  border: none;
+  font-size: 16px;
+  color: #373737;
+  outline: none;
+  padding: 10px;
+}
+
+#subscription .center .inputs .submit {
+  background-color: #16a085;
+  color: #fff;
+  margin: 0;
+  padding: 0 15px;
+  border: none;
+  font-size: 20px;
 }
 
 #download {
