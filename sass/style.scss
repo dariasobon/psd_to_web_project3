@@ -57,6 +57,8 @@ h3 {
 	height: 50px;
 	transition: .5s;
 	font-weight: bold;
+	outline: transparent;
+	cursor: pointer;
 	&:hover {
 		border: double 4px $maincolor;
 		background-color: transparent;
@@ -163,8 +165,7 @@ h3 {
 				padding: 50px 0 50px;
 				line-height: 1.7;
 			}
-			button {
-			}
+			
 		}
 		.right {
 			position: absolute;
@@ -261,6 +262,7 @@ h3 {
 				font-size: 20px;
 				cursor: pointer;
 				transition: .5s;
+				outline: transparent;
 				&:hover {
 					font-size: 30px
 				}
@@ -295,6 +297,7 @@ h3 {
 				margin: 20px;
 				border-radius: 7px;
 				transition: .7s;
+				outline: transparent;
 				&:hover {
 					background-color: $maincolor;
 				}
