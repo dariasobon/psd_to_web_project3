@@ -199,7 +199,7 @@ h3 {
 #design .container .row .swiper-container {
   margin-top: 50px;
   max-width: 400px;
-  max-height: 350px;
+  max-height: 400px;
 }
 
 #design .container .row .swiper-container .swiper-wrapper {
@@ -275,6 +275,12 @@ h3 {
   padding: 0 15px;
   border: none;
   font-size: 20px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+#subscription .center .inputs .submit:hover {
+  font-size: 30px;
 }
 
 #download {
@@ -461,6 +467,32 @@ footer #scrollTop button:hover {
   }
   #home .header-content {
     max-height: 80vh;
+  }
+  #photoapp {
+    height: 700px;
+  }
+  footer .info {
+    text-align: center;
+    margin: 0 auto;
+  }
+  footer .logoFooter {
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  #design .container .row .swiper-container {
+    height: 400px;
+  }
+  #community {
+    padding: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  #community .container .row .swiper-container .swiper-wrapper .swiper-slide {
+    width: 300px;
   }
 }
 
