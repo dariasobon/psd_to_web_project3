@@ -9,15 +9,20 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
 </head>
 <body>
 	<header id="home">
 		<div class="container">
 			<nav>
-				<ul>
+				<div class="mobile-menu">
+	                <label for="toggle"><i class="fas fa-bars fa-2x"></i></label>
+	                <input type="checkbox" id="toggle"> 
+	            </div>
+				<ul class="hamburger">
 					<li><a href="#home" class="homeLink">home</a></li>
 					<li><a href="#photoapp" class="photolink">photoapp</a></li>
-					<li><a href="#" class=""><img src="images/logo.png"></a></li>
+					<li><a href="#" class="photoflash"><img src="images/logo.png"></a></li>
 					<li><a href="#design" class="designLink">design</a></li>
 					<li><a href="#download" class="downloadLink">download</a></li>
 				</ul>
@@ -89,9 +94,6 @@
 
 				    <!-- If we need scrollbar -->
 				</div>
-
-
-
 			</div>
 		</div>
 	</section>
@@ -131,7 +133,8 @@
 		</div>
 	</section>
 	<section id="download">
-			<div class="container">
+		<div class="container">
+			<div class="center">
 				<h2>download it</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				<div class="row">
@@ -139,6 +142,7 @@
 					<button class="downloadBtn">play store <i class="fab fa-android"></i></button>
 				</div>
 			</div>
+		</div>
 	</section>
 
 	<footer>
@@ -146,21 +150,26 @@
 			<div class="row">
 				<div class="info">
 					<ul>
-						<li>credits</li>
-						<li>privacy</li>
-						<li>our teams</li>
+						<li class="line"><a href="#">credits </a></li>
+						<li class="line"><a href="#">privacy </a></li>
+						<li><a href="#">our teams</a></li>
 					</ul>
 					<p>Copyright by phototime - all right reserved</p>
 				</div>
 				<div class="logoFooter">
-					<img src="images/greenLogo.png" alt="">
+					<a href="#home"><img src="images/greenLogo.png" alt=""></a>
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="js/script.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
-		<script type="text/javascript" src="swiper.js"></script>
+		<div id="scrollTop">
+			<button><i class="fas fa-angle-up"></i></button>
+		</div>
+		
 	</footer>
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
+	<script type="text/javascript" src="swiper.js"></script>
 
 	<!--SWIPER-->
 	 <script>
