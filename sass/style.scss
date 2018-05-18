@@ -5,19 +5,23 @@
 
 body {
 	margin: 0 auto;
+	font-family: 'Nanum Gothic', sans-serif;
+	letter-spacing: 2px;
 }
 $white: #fff;
 $graybackground: #f5f6f7;
 $maincolor: #16a085;
 $graycolor: #373737;
+$lightmaincolor: #1abc9c;
 
 .container {
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
 .row {
 	display: flex;
+	flex-wrap: wrap;
 }
 .wrap {
 	flex-wrap: wrap;
@@ -27,6 +31,7 @@ $graycolor: #373737;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	flex-wrap: wrap;
 }
 
 h2 {
@@ -47,9 +52,16 @@ h3 {
 	text-transform: uppercase;
 	border: none;
 	color: $white;
-	border-radius: 10px;
+	border-radius: 6px;
 	width: 150px;
 	height: 50px;
+	transition: .5s;
+	font-weight: bold;
+	&:hover {
+		border: double 4px $maincolor;
+		background-color: transparent;
+		color: $maincolor;
+	}
 }
 #home {
 	background-image: url('../images/background.jpg');
@@ -58,6 +70,9 @@ h3 {
 	height: 600px;
 	.container {
 		nav {
+			.mobile-menu {
+				display: none;
+			}
 			ul {
 				padding-top: 30px;
 				padding-left: 0;
@@ -71,9 +86,13 @@ h3 {
 						padding: 10px 50px;
 						
 						a {
-							
+							font-weight: bold;
 							text-decoration: none;
 							color: $white;
+							transition: .5s;
+							&:hover {
+								color: $maincolor;
+							}
 						}
 					}
 				}
@@ -94,15 +113,36 @@ h3 {
 		.social{
 			margin: 0 auto;
 			text-align: center;
-			button {
+			.social-btn {
 				border-radius: 50%;
 				background-color: rgba(0,0,0,0);
 				color: $white;
-				border: none;
+				border: 2px solid transparent;
 				font-size: 30px;
-				padding: 20px;
+				margin: 10px;
 				cursor: pointer;
+				
+				padding: 10px;
+				.fa-twitter {
+					transition: .5s;
+					&:hover {
+						color: #00aced;
+					}
+				}
+				.fa-flickr {
+					transition: .5s;
+					&:hover {
+						color: #0063dc;
+					}
+				}
+				.fa-dribbble {
+					transition: .5s;
+					&:hover {
+						color: #ea4c89;
+					}
+				}
 			}
+			
 		}
 	}
 
@@ -118,6 +158,7 @@ h3 {
 			flex-direction: column;
 			padding: 100px 0 100px 0;
 			width: 40%;
+			margin: 0 20px;
 			p {
 				padding: 50px 0 50px;
 				line-height: 1.7;
@@ -147,8 +188,8 @@ h3 {
 			}
 			.swiper-container{
 				margin-top: 50px;
-			    width: 400px;
-			    height: 300px;
+			    max-width: 400px;
+			    max-height: 350px;
 			    .swiper-wrapper {
 			    	padding: 50px;
 			    	.swiper-slide {
@@ -165,15 +206,16 @@ h3 {
 }
 
 #community {
+	padding: 30px 0;
 	.container {
 		.about {
-			margin: 0 100px;
+			margin-left: 100px;
 			p {
 				text-align: center;
 			}
 		}
 		.swiper-container {
-			width: 500px;
+			max-width: 500px;
 			height: 250px;
 			.swiper-slide {
 				text-align: center;
@@ -225,26 +267,78 @@ h3 {
 #download {
 	background-color: $graybackground;
 	text-align: center;
-	.row {
-
+	height: 500px;
+	margin: 0 auto;
+	.center {
+		height: 500px;
+		p {
+			width: 60%;
+			margin: 10px auto;
+		}
+		.row {
+			justify-content: center;
+			.downloadBtn {
+				position: relative;
+				width: 170px;
+				background-color: $lightmaincolor;
+				height: 40px;
+				cursor: pointer;
+				border: none;
+				color: $white;
+				text-align: left;
+				text-transform: uppercase;
+				margin: 20px;
+				border-radius: 7px;
+				transition: .7s;
+				&:hover {
+					background-color: $maincolor;
+				}
+				.fab {
+					background-color: $maincolor;
+					padding: 12px;
+					position: absolute;
+					top: 0;
+					right: 0;
+					border-radius: 0 7px 7px 0;
+					font-size: 16px;
+				}
+			}
+		}
 	}
 }
 
 footer {
 	padding: 20px 0 20px 0;
 	.container {
-
 		.row {
+			margin: 10px;
 			justify-content: space-between;
 			align-items: center;
 			.info {
+				font-weight: bold;
+				font-size: 14px;
 				ul {
 					padding: 0;
 					li {
 						list-stye-type: none;
 						display: inline-block;
 						text-transform: uppercase;
+
+
+						a {
+							text-decoration: none;
+							color: black;
+							border-bottom: 1px solid $white;
+							transition: .5s;
+							&:hover {
+								border-bottom: 2px solid $lightmaincolor;
+							}
+						}
 					}
+					.line {
+							padding-right: 3px;
+							border-right: 2px solid $maincolor;
+						}
 				}
 			}
 			.logoFooter {
@@ -252,4 +346,132 @@ footer {
 			}
 		}
 	}
+	#scrollTop {
+		button {
+			position: fixed;
+			right: 30px;
+			bottom: 30px;
+			background-color: $maincolor;
+			transform: .5s;
+			color: white;
+			border: none;
+			padding: 5px 8px;
+			font-size: 20px;
+			border-radius: 3px;
+			&:hover {
+				background-color: $lightmaincolor;
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	#home {
+		.container {
+			nav {
+				.mobile-menu {
+						position: relative;
+						display: block;
+						label {
+							position: absolute;
+							top: 50%;
+							left: 15px;
+							display: inline-block;
+						    cursor: pointer;
+						    color: white;
+						    line-height: 70px;
+						    transition: 0.6s;
+						}
+						input {
+							display: none;
+							&:checked+ul {
+					            display: block;
+					        }
+						}
+					}
+					ul {
+						display: none;
+						li {
+							display: block;
+							text-align: center;
+							font-size: 14px;
+							line-height: 1;
+						}
+					}
+			}
+			.header-content {
+				h1 {
+					text-align: center;
+				}
+			}
+		}
+	}
+
+}
+
+@media (max-width: 991px) {
+	#photoapp {
+		.container {
+			.left {
+				width: 100%;
+				text-align: center;
+				.btn {
+					margin: 0 auto;
+				}
+			}
+			.right {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	
+	#design {
+		.container {
+			.row {
+				.phonepic {
+					display: none;
+				}
+			}
+		}
+	}
+
+	#community {
+		padding: 20px;
+		.container {
+			.row {
+				flex-direction: column;
+				.about {
+					margin: 0 auto;
+					text-align: center;
+				}
+			}
+			
+		}
+	}
+	#subscription {
+		.center {
+			h2 {
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+
+	#home {
+		height: 100vh;
+		nav {
+			ul {
+			}
+		}
+		.header-content {
+			max-height: 80vh;
+		}
+	}
+
+
 }
