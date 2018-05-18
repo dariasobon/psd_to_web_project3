@@ -4,15 +4,18 @@
 
 body {
   margin: 0 auto;
+  font-family: 'Nanum Gothic', sans-serif;
+  letter-spacing: 2px;
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .wrap {
@@ -24,6 +27,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 h2 {
@@ -44,9 +48,17 @@ h3 {
   text-transform: uppercase;
   border: none;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 6px;
   width: 150px;
   height: 50px;
+  transition: .5s;
+  font-weight: bold;
+}
+
+.btn:hover {
+  border: double 4px #16a085;
+  background-color: transparent;
+  color: #16a085;
 }
 
 #home {
@@ -54,6 +66,10 @@ h3 {
   background-attachment: fixed;
   background-size: cover;
   height: 600px;
+}
+
+#home .container nav .mobile-menu {
+  display: none;
 }
 
 #home .container nav ul {
@@ -72,8 +88,14 @@ h3 {
 }
 
 #home .container nav ul li a {
+  font-weight: bold;
   text-decoration: none;
   color: #fff;
+  transition: .5s;
+}
+
+#home .container nav ul li a:hover {
+  color: #16a085;
 }
 
 #home .header-content {
@@ -96,14 +118,39 @@ h3 {
   text-align: center;
 }
 
-#home .social button {
+#home .social .social-btn {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0);
   color: #fff;
-  border: none;
+  border: 2px solid transparent;
   font-size: 30px;
-  padding: 20px;
+  margin: 10px;
   cursor: pointer;
+  padding: 10px;
+}
+
+#home .social .social-btn .fa-twitter {
+  transition: .5s;
+}
+
+#home .social .social-btn .fa-twitter:hover {
+  color: #00aced;
+}
+
+#home .social .social-btn .fa-flickr {
+  transition: .5s;
+}
+
+#home .social .social-btn .fa-flickr:hover {
+  color: #0063dc;
+}
+
+#home .social .social-btn .fa-dribbble {
+  transition: .5s;
+}
+
+#home .social .social-btn .fa-dribbble:hover {
+  color: #ea4c89;
 }
 
 #photoapp {
@@ -121,6 +168,7 @@ h3 {
   flex-direction: column;
   padding: 100px 0 100px 0;
   width: 40%;
+  margin: 0 20px;
 }
 
 #photoapp .container .left p {
@@ -150,8 +198,8 @@ h3 {
 
 #design .container .row .swiper-container {
   margin-top: 50px;
-  width: 400px;
-  height: 300px;
+  max-width: 400px;
+  max-height: 350px;
 }
 
 #design .container .row .swiper-container .swiper-wrapper {
@@ -163,8 +211,12 @@ h3 {
   line-height: 1.2;
 }
 
+#community {
+  padding: 30px 0;
+}
+
 #community .container .about {
-  margin: 0 100px;
+  margin-left: 100px;
 }
 
 #community .container .about p {
@@ -172,7 +224,7 @@ h3 {
 }
 
 #community .container .swiper-container {
-  width: 500px;
+  max-width: 500px;
   height: 250px;
 }
 
@@ -228,6 +280,50 @@ h3 {
 #download {
   background-color: #f5f6f7;
   text-align: center;
+  height: 500px;
+  margin: 0 auto;
+}
+
+#download .center {
+  height: 500px;
+}
+
+#download .center p {
+  width: 60%;
+  margin: 10px auto;
+}
+
+#download .center .row {
+  justify-content: center;
+}
+
+#download .center .row .downloadBtn {
+  position: relative;
+  width: 170px;
+  background-color: #1abc9c;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 20px;
+  border-radius: 7px;
+  transition: .7s;
+}
+
+#download .center .row .downloadBtn:hover {
+  background-color: #16a085;
+}
+
+#download .center .row .downloadBtn .fab {
+  background-color: #16a085;
+  padding: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 7px 7px 0;
+  font-size: 16px;
 }
 
 footer {
@@ -235,8 +331,14 @@ footer {
 }
 
 footer .container .row {
+  margin: 10px;
   justify-content: space-between;
   align-items: center;
+}
+
+footer .container .row .info {
+  font-weight: bold;
+  font-size: 14px;
 }
 
 footer .container .row .info ul {
@@ -249,8 +351,117 @@ footer .container .row .info ul li {
   text-transform: uppercase;
 }
 
+footer .container .row .info ul li a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #fff;
+  transition: .5s;
+}
+
+footer .container .row .info ul li a:hover {
+  border-bottom: 2px solid #1abc9c;
+}
+
+footer .container .row .info ul .line {
+  padding-right: 3px;
+  border-right: 2px solid #16a085;
+}
+
 footer .container .row .logoFooter {
   padding-right: 100px;
+}
+
+footer #scrollTop button {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: #16a085;
+  transform: .5s;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  font-size: 20px;
+  border-radius: 3px;
+}
+
+footer #scrollTop button:hover {
+  background-color: #1abc9c;
+}
+
+@media (max-width: 1000px) {
+  #home .container nav .mobile-menu {
+    position: relative;
+    display: block;
+  }
+  #home .container nav .mobile-menu label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    line-height: 70px;
+    transition: 0.6s;
+  }
+  #home .container nav .mobile-menu input {
+    display: none;
+  }
+  #home .container nav .mobile-menu input:checked + ul {
+    display: block;
+  }
+  #home .container nav ul {
+    display: none;
+  }
+  #home .container nav ul li {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1;
+  }
+  #home .container .header-content h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 991px) {
+  #photoapp .container .left {
+    width: 100%;
+    text-align: center;
+  }
+  #photoapp .container .left .btn {
+    margin: 0 auto;
+  }
+  #photoapp .container .right {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #design .container .row .phonepic {
+    display: none;
+  }
+  #community {
+    padding: 20px;
+  }
+  #community .container .row {
+    flex-direction: column;
+  }
+  #community .container .row .about {
+    margin: 0 auto;
+    text-align: center;
+  }
+  #subscription .center h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #home {
+    height: 100vh;
+  }
+  #home .header-content {
+    max-height: 80vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
